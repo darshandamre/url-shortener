@@ -1,9 +1,9 @@
 import { Router } from "express";
 const router = Router();
-import { addUrl, duplicateKeyErrorHandler, getUrlById } from "./controllers.js";
+import { addUrl, getUrl, getUrlById } from "./controllers.js";
 
-router.post("/shorturl", addUrl);
-router.use(duplicateKeyErrorHandler);
+router.post("/shorturl", getUrl, addUrl);
+// router.use(duplicateKeyErrorHandler);
 
 router.get("/shorturl/:id", getUrlById);
 
