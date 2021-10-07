@@ -11,12 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// Routes
+app.use("/public", express.static(`${process.cwd()}/public`));
 
+// Routes
 app.get("/", (req, res) => {
-  res.json({
-    app: "running",
-  });
+  res.sendFile(process.cwd() + "/views/index.html");
 });
 
 app.use("/api", routes);

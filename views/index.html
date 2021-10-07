@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Short URL</title>
+  </head>
+  <body>
+    <h1>Short URL</h1>
+    <main class="container">
+      <form action="api/shorturl" method="POST">
+        <fieldset>
+          <legend>Make your URL short</legend>
+          <label for="input-url">URL:</label>
+          <input
+            type="text"
+            name="url"
+            id="input-url"
+            placeholder="https://darshandamre.netlify.app/"
+          />
+          <input type="submit" value="POST URL" />
+        </fieldset>
+      </form>
+
+      <div class="example">
+        ex:
+        <a href="/api/shorturl/9">[this_project_url]/api/shorturl/9</a> will
+        redirect to
+        <a href="https://twitter.com/DarshanDamre"
+          >https://twitter.com/DarshanDamre</a
+        >
+      </div>
+    </main>
+    <footer>
+      <p>by <a href="https://github.com/darshandamre">darshan</a></p>
+    </footer>
+  </body>
+</html>
