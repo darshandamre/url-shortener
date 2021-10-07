@@ -58,6 +58,11 @@ input[type="text"] {
   padding: 0.5em 1em;
 }
 
+input[type="text"]:focus {
+  border-radius: 100px;
+  border: 2px solid black;
+}
+
 input[type="submit"] {
   color: white;
   background-color: black;
