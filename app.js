@@ -12,6 +12,13 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
+
+app.get("/", (req, res) => {
+  res.json({
+    app: "running",
+  });
+});
+
 app.use("/api", routes);
 
 // PORT
